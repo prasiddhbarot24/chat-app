@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let's chat</title>
+    <link rel="stylesheet" href="public/styles/index.css">
+    <!-- <link rel="stylesheet" href="chat.css"> jyare upload karvanu hoy tyare aa file -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+    <div class="main">
+        <header>
+            <div class="title">
+                <img width="48" height="48" src="https://img.icons8.com/fluency/48/chat.png" alt="chat"/>
+                <h1>Let's chat</h1>
+            </div>
+            <button id="btn" type="button"  onclick="show_hide()"" >
+                <img width="64"  height="64" src="https://img.icons8.com/fluency/48/user-menu-male.png" alt="user-menu-male"/>
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="user-window">
+                <div class="user-head">
+                    <h3>People</h3>
+                    <h4 class="users-count">0</h4>
+                </div>
+                <div class="users-list">
+                    <!-- <p>Meet</p> // this will handle by js directly
+                    <p>Jeet</p>
+                    <p>Heet</p> -->
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                    <!-- <div class="user-join"> // this will handle by js directly
+                        <p><b>Meet</b> joined the chat</p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Meet</h5>
+                        <p>hello, Heet</p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>Jeet</h5>
+                        <p>hi,Meet2</p>
+                    </div> -->
+                </div>
+                <div class="user-input">
+                    <input type="text" id="user-msg" placeholder="Message">
+                    <button type="button" id="msg-send"><img src="https://img.icons8.com/fluency/48/000000/sent.png" alt="sent"/></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // let btn = document.querySelector("#btn");
+        // btn.addEventListener('click',show_hide);
+        var userWindow = document.querySelector(".user-window");
+        function show_hide(){
+            if(userWindow.style.display = "none"){
+                userWindow.style.display = "block";
+            }else{
+                userWindow.style.display="none";
+            }
+        };
+       
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script>
+        var socket = io();
+    </script> -->
+    <script src="js/client.js"></script>
+</body>
+</html>

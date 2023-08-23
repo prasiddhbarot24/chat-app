@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  overflow: hidden;
+  border-radius: 40px;
+}
+.main header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #2791cf;
+  height: 100px;
+}
+.main header div.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main header div.title h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  color: #ffffff;
+}
+.main header button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 5px;
+  display: none;
+}
+.main header button img {
+  margin: -7px 0px;
+}
+.main div.container {
+  background-color: #7E878c;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.main div.container div.user-window {
+  background-color: #3f3f3f;
+  width: 400px;
+  border-radius: 20px;
+  padding: 15px 20px;
+  color: #ffffff;
+}
+.main div.container div.user-window div.user-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+.main div.container div.user-window div.user-head h4 {
+  background-color: #7E878c;
+  border-radius: 50px;
+  padding: 0px 8px;
+}
+.main div.container div.user-window div.users-list p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  margin: 5px;
+}
+.main div.container div.chat-window {
+  width: 80%;
+  margin-left: 20px;
+  background-color: #3f3f3f;
+  border-radius: 20px;
+  padding: 10px;
+}
+.main div.container div.chat-window div.chats {
+  height: 65vh;
+  overflow-y: auto;
+}
+.main div.container div.chat-window div.chats div.user-join {
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  color: #3f3f3f;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px 10px;
+  margin: 3px auto;
+  border-radius: 50px;
+}
+.main div.container div.chat-window div.chats div.message {
+  max-width: 400px;
+  font-size: 1.2rem;
+  color: #3f3f3f;
+  background-color: #ffffff;
+  border-radius: 2px 25px 25px 16px;
+  margin: 15px 10px;
+  padding: 6px 15px;
+  text-align: justify;
+  word-wrap: break-word;
+}
+.main div.container div.chat-window div.chats div.message h5, .main div.container div.chat-window div.chats div.message p {
+  font-size: 1.5rem;
+}
+.main div.container div.chat-window div.chats div.outgoing {
+  margin-left: auto;
+  border-radius: 25px 2px 16px 25px;
+  background-color: #2791cf;
+  color: #ffffff;
+  padding-right: 25px;
+  word-wrap: break-word;
+}
+.main div.container div.chat-window div.chats div.outgoing h5 {
+  text-align: right;
+}
+.main div.container div.chat-window div.user-input {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+}
+.main div.container div.chat-window div.user-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 20px 20px 20px 20px;
+  padding: 15px 15px;
+  font-size: 1.5rem;
+}
+.main div.container div.chat-window div.user-input button {
+  border: none;
+  outline: none;
+  background-color: #3f3f3f;
+}
+.main div.container div.chat-window div.user-input button img {
+  width: 64px;
+  height: 64px;
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    width: 95%;
+  }
+  .main header button {
+    display: block;
+    width: 64px;
+    height: 64px;
+  }
+  .main div.container {
+    position: relative;
+  }
+  .main div.container div.user-window {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 5px 15px -6px black;
+    height: -moz-max-content;
+    height: max-content;
+    padding-bottom: 0px;
+    z-index: 5;
+    display: none;
+  }
+  .main div.container div.chat-window {
+    width: 95%;
+    margin-left: 5px;
+  }
+  .main div.container div.chat-window div.chats div.message {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .user-input input {
+    height: 55px;
+  }
+  .user-input button img {
+    width: 55px;
+    height: 55px;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,11 @@
+server.js
+--> io.emit() for targeting all user
+-->socket.emit() for some users only
+--> emit() used for triggered event
+--> on() use dfor handle event
+--> socket.broadcast.emit("event-name",username) used for boradcasting msg to all connected user except the which is joined now
+
+
+
+clientjs
+line 33 - users_arr= Object.values(users); what does it mean?
